@@ -32,6 +32,10 @@ public class Stack {
 	}
 	
 	public Integer top() {
-		return 0;
+		if (empty() == 0) {
+			return stack.get(stack.size());
+		} else {
+			return -1;
+		}
 	}
 }
