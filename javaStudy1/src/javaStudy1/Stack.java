@@ -20,7 +20,7 @@ public class Stack {
 	}
 	
 	public Integer size() {
-		return 0;
+		return stack.size();
 	}
 	
 	public Integer empty() {
