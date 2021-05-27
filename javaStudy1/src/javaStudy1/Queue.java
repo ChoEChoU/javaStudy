@@ -10,7 +10,14 @@ public class Queue {
 	}
 	
 	public Integer pop() {
-		return 1;
+		if (queue.size() != 0) {
+			Integer firstNum = queue.get(0);
+			queue.remove(0);
+			return firstNum;
+		}
+		else {
+			return -1;
+		}
 	}
 	
 	public Integer size() {
