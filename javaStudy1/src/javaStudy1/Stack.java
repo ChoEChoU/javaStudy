@@ -24,7 +24,11 @@ public class Stack {
 	}
 	
 	public Integer empty() {
-		return 0;
+		if (stack.size() != 0) {
+			return 0;
+		} else {
+			return 1;
+		}
 	}
 	
 	public Integer top() {
