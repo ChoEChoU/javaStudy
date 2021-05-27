@@ -10,9 +10,9 @@ public class Stack {
 	}
 	
 	public Integer pop() {
-		if (stack.size() != 0) {
-			Integer topNum = stack.get(stack.size()-1);
-			stack.remove(stack.size()-1);
+		if (size() != 0) {
+			Integer topNum = stack.get(size()-1);
+			stack.remove(size()-1);
 			return topNum;
 		} else {
 			return -1;
@@ -24,7 +24,7 @@ public class Stack {
 	}
 	
 	public Integer empty() {
-		if (stack.size() != 0) {
+		if (size() != 0) {
 			return 0;
 		} else {
 			return 1;
@@ -33,7 +33,7 @@ public class Stack {
 	
 	public Integer top() {
 		if (empty() == 0) {
-			return stack.get(stack.size()-1);
+			return stack.get(size()-1);
 		} else {
 			return -1;
 		}
