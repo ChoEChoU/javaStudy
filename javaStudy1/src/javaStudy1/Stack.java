@@ -6,7 +6,7 @@ public class Stack {
 	ArrayList<Integer> stack = new ArrayList<Integer>();
 	
 	public void push(Integer X) {
-		
+		stack.add(X);
 	}
 	
 	public Integer pop() {
