@@ -10,7 +10,13 @@ public class Stack {
 	}
 	
 	public Integer pop() {
-		return 0;
+		if (stack.size() != 0) {
+			Integer topNum = stack.get(stack.size());
+			stack.remove(stack.size());
+			return topNum;
+		} else {
+			return -1;
+		}
 	}
 	
 	public Integer size() {
