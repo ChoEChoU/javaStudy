@@ -21,7 +21,7 @@ public class Queue {
 	}
 	
 	public Integer size() {
-		return 1;
+		return queue.size();
 	}
 	
 	public Integer empty() {
