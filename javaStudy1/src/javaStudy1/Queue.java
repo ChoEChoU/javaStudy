@@ -21,22 +21,30 @@ public class Queue {
 	}
 	
 	public Integer size() {
-		return queue.size();
+		return queue.size();  
 	}
 	
 	public Integer empty() {
-		 return 1;
+		 if (queue.size() != 0) {
+			return 0;
+		} else {
+			return 1;
+		}
 	}
 	
 	public Integer front() {
-		return 1;
+		if (empty() == 1) {
+			return -1;
+		} else {
+			return queue.get(0);
+		}
 	}
 	
 	public Integer back() {
-		return 1;
-	}
-	
-	public static void main(String[] args) {
-		
+		if (empty() == 1) {
+			return -1;
+		} else {
+			return queue.get(queue.size() -1);
+		}
 	}
  }
