@@ -3,7 +3,7 @@ package javaStudy1;
 import java.util.ArrayList;
 
 public class Stack {
-	ArrayList<Integer> stack = new ArrayList<Integer>();
+	private ArrayList<Integer> stack = new ArrayList<Integer>();
 	
 	public void push(Integer X) {
 		stack.add(X);

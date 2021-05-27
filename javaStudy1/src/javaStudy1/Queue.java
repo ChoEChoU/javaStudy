@@ -3,7 +3,7 @@ package javaStudy1;
 import java.util.ArrayList;
 
 public class Queue {
-	ArrayList<Integer> queue = new ArrayList<Integer>(); //정수들의 집합을 위해서 ArrayList 클래스를 사용
+	private ArrayList<Integer> queue = new ArrayList<Integer>(); //정수들의 집합을 위해서 ArrayList 클래스를 사용
 	
 	public void push(Integer X) {
 		queue.add(X); // 사용자가 push 함수를 사용 할 경우 리스트에 정수 X를 추가
