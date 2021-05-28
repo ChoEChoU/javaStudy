@@ -1,9 +1,20 @@
 package javaStudy1;
 
+import java.util.Scanner;
+
 public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
+		Scanner input = new Scanner(System.in);
+		
+		Integer number = input.nextInt();
+		
+		for (int i = 0; i < number; i++) {
+			String command = input.nextLine();
+			
+		}
 		System.out.println("Queue Ãâ·Â°ª");
 		Queue queue = new Queue();
 		queue.push(1);
