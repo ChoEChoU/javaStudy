@@ -14,27 +14,34 @@ public class Main {
 		Queue queue = new Queue();
 		
 		for (int i = 0; i < lineNumber; i++) {
-			String command = input.nextLine();
+			String command = input.next();
 			switch (command) {
 			case "push":
 				Integer pushNumber = input.nextInt();
 				queue.push(pushNumber);
+				break;
 
 			case "pop":
 				System.out.println(queue.pop());
+				break;
 				
 			case "size":
 				System.out.println(queue.size());
+				break;
 				
 			case "empty":
 				System.out.println(queue.empty());
+				break;
 				
 			case "front":
 				System.out.println(queue.front());
+				break;
 				
 			case "back":
 				System.out.println(queue.back());
+				break;
 			}
+		}
 		input.close();
 //		queue.push(1);
 //		queue.push(2);
@@ -70,6 +77,5 @@ public class Main {
 //		stack.push(3);
 //		System.out.println(stack.empty());
 //		System.out.println(stack.top());
-		}
 	}
 }
