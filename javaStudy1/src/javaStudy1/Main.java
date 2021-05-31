@@ -7,21 +7,21 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Scanner input = new Scanner(System.in);
+		Scanner input = new Scanner(System.in); // Scanner 객체 생성
 		
-		Integer lineNumber = input.nextInt();
+		Integer lineNumber = input.nextInt(); // 정수를 입력 받음
 		
-		Queue queue = new Queue();
-		//Stack stack = new Stack();
+		Queue queue = new Queue(); // Queue 객체 생성
+//		Stack stack = new Stack();
 		
-		for (int i = 0; i < lineNumber; i++) {
-			String command = input.next();
-			switch (command) {
-			case "push":
-				Integer pushNumber = input.nextInt();
-				queue.push(pushNumber);
-				//stack.push(pushNumber);
-				break;
+		for (int i = 0; i < lineNumber; i++) { // lineNumber의 수만큼 반복
+			String command = input.next(); // 명령을 입력받음
+			switch (command) { // 입력받은 명령에 따라 실행을 다르게 함
+			case "push": // 명령문이 push 일때
+				Integer pushNumber = input.nextInt(); // push와 함께 입력받은 정수를 pushNumber란 변수에 선언
+				queue.push(pushNumber); // pushNumber을 큐에 push함
+//				stack.push(pushNumber);
+				break; // switch문 종료
 
 			case "pop":
 				System.out.println(queue.pop());
@@ -51,6 +51,6 @@ public class Main {
 //				break;
 			}
 		}
-		input.close();
+		input.close(); // 스캐너 닫기
 	}
 }
