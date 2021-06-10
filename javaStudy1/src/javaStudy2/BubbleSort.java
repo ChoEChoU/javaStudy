@@ -7,11 +7,11 @@ public class BubbleSort {
 	
 	public int[] sort(int[] inputArray){
 		for (int i = 0; i < inputArray.length; i++) {
-			for (int j = 0; j < inputArray.length-i; j++) {
-				if (inputArray[i] < inputArray[i+1]) {
-					int temp = inputArray[i];
-					inputArray[i] = inputArray[i+1];
-					inputArray[i+1] = temp;
+			for (int j = 1; j < inputArray.length-i; j++) {
+				if (inputArray[j-1] > inputArray[j]) {
+					int temp = inputArray[j];
+					inputArray[j] = inputArray[j-1];
+					inputArray[j-1] = temp;
 					swapCnt++;
 				}
 			}
