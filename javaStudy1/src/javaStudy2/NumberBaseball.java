@@ -26,4 +26,8 @@ public class NumberBaseball {
 		numberSet.add(num2);
 		numberSet.add(num3);
 	}
+	
+	public String playGame(int num1, int num2, int num3) {
+		return "";
+	}
 }
