@@ -19,7 +19,7 @@ public class NumberBaseball {
 		}
 		
 		while (num3 == num2 || num3 == num1) {
-			num2 = random.nextInt(10);
+			num3 = random.nextInt(10);
 		}
 		
 		numberSet.add(num1);
