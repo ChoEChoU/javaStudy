@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class NumberBaseball {
-	private ArrayList<Integer> numberSet;
+	private ArrayList<Integer> numberSet = new ArrayList<Integer>();
 	
 	public void makeNumber() {
 		Random random = new Random();
