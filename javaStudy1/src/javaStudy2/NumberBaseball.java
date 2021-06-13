@@ -28,6 +28,22 @@ public class NumberBaseball {
 	}
 	
 	public String playGame(int num1, int num2, int num3) {
+		boolean flagOne = false;
+		boolean flagTwo = false;
+		boolean flagThree = false;
+		
+		for (int i = 0; i < numberSet.size(); i++) {
+			if (numberSet.get(i) == num1) {
+				flagOne = true;
+			}
+			else if (numberSet.get(i) == num2) {
+				flagTwo = true; 
+			}
+			else if (numberSet.get(i) == num3) {
+				flagThree = true;
+			}
+		}
+		
 		return "";
 	}
 }
