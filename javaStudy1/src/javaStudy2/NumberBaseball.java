@@ -28,22 +28,35 @@ public class NumberBaseball {
 	}
 	
 	public String playGame(int num1, int num2, int num3) {
-		boolean flagOne = false;
-		boolean flagTwo = false;
-		boolean flagThree = false;
+		int strike = 0;
+		int ball = 0;
+		String out = "out!";
 		
-		for (int i = 0; i < numberSet.size(); i++) {
-			if (numberSet.get(i) == num1) {
-				flagOne = true;
-			}
-			else if (numberSet.get(i) == num2) {
-				flagTwo = true; 
-			}
-			else if (numberSet.get(i) == num3) {
-				flagThree = true;
-			}
+		if (numberSet.contains(num1) && numberSet.get(0) == num1) {
+			strike++;
+		}
+		else if (numberSet.contains(num1) && numberSet.get(0) != num1) {
+			ball++;
 		}
 		
-		return "";
+		if (numberSet.contains(num2) && numberSet.get(1) == num2) {
+			strike++;
+		}
+		else if (numberSet.contains(num2) && numberSet.get(1) != num2) {
+			ball++;
+		}
+		
+		if (numberSet.contains(num3) && numberSet.get(2) == num3) {
+			strike++;
+		}
+		else if (numberSet.contains(num3) && numberSet.get(2) != num3) {
+			ball++;
+		}
+		
+		if (!numberSet.contains(num1) && numberSet.contains(num2) && numberSet.contains(num3)) {
+			return out;
+		}
+		
+		return String.valueOf(strike) + "strike " + String.valueOf(ball) + "ball";
 	}
 }
