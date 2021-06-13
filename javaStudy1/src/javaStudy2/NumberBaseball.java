@@ -53,7 +53,7 @@ public class NumberBaseball {
 			ball++;
 		}
 		
-		if (!numberSet.contains(num1) && numberSet.contains(num2) && numberSet.contains(num3)) {
+		if (!numberSet.contains(num1) && !numberSet.contains(num2) && !numberSet.contains(num3)) {
 			return out;
 		}
 		
