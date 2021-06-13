@@ -9,6 +9,12 @@ public class Main {
 		
 		BubbleSort sort = new BubbleSort();
 		sort.sort(array);
+		
+		NumberBaseball baseball = new NumberBaseball();
+		
+		baseball.makeNumber();
+		
+		System.out.println(baseball.playGame(3, 4, 6));
 	}
 
 }
