@@ -11,15 +11,19 @@ public class Main {
 		
 		int num = scan.nextInt();
 		
-		int[] array = null;
+		int[] array = new int[num];
 		
-		for (int i = 0; i < num-1; i++) {
+		for (int i = 0; i < num; i++) {
 			int number = scan.nextInt();
 			array[i] = number; 
 		}
 		
 		BubbleSort sort = new BubbleSort();
 		sort.sort(array);
+		
+		System.out.println(sort.getSwapCnt());
+		
+		scan.close();
 		
 		NumberBaseball baseball = new NumberBaseball();
 		
