@@ -59,4 +59,6 @@ public class NumberBaseball {
 		
 		return String.valueOf(strike) + "strike " + String.valueOf(ball) + "ball";
 	}
+	
+//	public int predictNumber()
 }
