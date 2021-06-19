@@ -60,5 +60,7 @@ public class NumberBaseball {
 		return String.valueOf(strike) + "strike " + String.valueOf(ball) + "ball";
 	}
 	
-//	public int predictNumber()
+	public int predictNumber(ArrayList<ArrayList<Integer>> numSet) {
+		return 0;
+	}
 }
