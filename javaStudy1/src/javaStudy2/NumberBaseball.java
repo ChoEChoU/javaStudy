@@ -27,7 +27,7 @@ public class NumberBaseball {
 		numberSet.add(num3);
 	}
 	
-	public String playGame(int num1, int num2, int num3) {
+	public ArrayList<Integer> playGame(int num1, int num2, int num3) {
 		int strike = 0;
 		int ball = 0;
 		String out = "out!";
@@ -54,37 +54,50 @@ public class NumberBaseball {
 		}
 		
 		if (!numberSet.contains(num1) && !numberSet.contains(num2) && !numberSet.contains(num3)) {
-			return out;
+			
 		}
 		
-		return String.valueOf(strike) + "strike " + String.valueOf(ball) + "ball";
+		ArrayList<Integer> strikeBall = new ArrayList<Integer>();
+		strikeBall.add(strike);
+		strikeBall.add(ball);
+		return strikeBall;
 	}
 	
 	public int predictNumber(ArrayList<ArrayList<Integer>> numSet) {
-		ArrayList<Integer> numList = new ArrayList<Integer>();
-		
+		ArrayList<String> result = new ArrayList<String>();
 		for (int i = 0; i < 10; i++) {
-			numList.add(i);
-		}
-		
-		for (int i = 0; i < numSet.size(); i++) {
-			int number = numSet.get(i).get(0);
-			
-			String strNumber = String.valueOf(number);
-			
-			int strike = numSet.get(i).get(1);
-			int ball = numSet.get(i).get(2);
-			
-			if (strike == 0 && ball == 0) {
-				numList.remove(strNumber.indexOf(0));
-				numList.remove(strNumber.indexOf(1));
-				numList.remove(strNumber.indexOf(2));
+			for (int j = 0; j < 10; j++) {
+				for (int k = 0; k < 10; k++) {
+					if (i != j && j != k && k != i) {
+						String StrI = String.valueOf(i);
+						String StrJ = String.valueOf(j);
+						String StrK = String.valueOf(k);
+						
+						String StrIJK = StrI + StrJ + StrK;
+						
+						int IntIJK = Integer.parseInt(StrIJK);
+						
+						for (int l = 0; l < numSet.size(); l++) {
+							Integer Input = numSet.get(l).get(0);
+							String strInput = String.valueOf(Input);
+							
+							int inputFirst = Integer.parseInt(StrI);
+							int inputSecond = Integer.parseInt(StrJ);
+							int inputThird = Integer.parseInt(StrK);
+							
+							ArrayList<Integer> game = playGame(inputFirst, inputSecond, inputThird);
+							
+							int strike = game.get(0);
+							int ball = game.get(1);
+							
+							if (strike == numSet.get(l).get(1) && ball == numSet.get(l).get(2)) {
+								result.add(StrIJK);
+							} 
+						}
+					}
+				}
 			}
-			
-			if (strike + ball == 3) {
-				numList.remove(strNumber.indexOf(0));
-			}
 		}
-		return 0;
+		return result.size();
 	}
 }

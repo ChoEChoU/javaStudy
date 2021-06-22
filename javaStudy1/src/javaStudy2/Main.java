@@ -10,30 +10,30 @@ public class Main {
 		
 		Scanner scan = new Scanner(System.in);
 		
-		int num = scan.nextInt();
-		
-		int[] array = new int[num];
-		
-		for (int i = 0; i < num; i++) {
-			int number = scan.nextInt();
-			array[i] = number; 
-		}
-		
-		BubbleSort sort = new BubbleSort();
-		sort.sort(array);
-		
-		System.out.println(sort.getSwapCnt());
+//		int num = scan.nextInt();
+//		
+//		int[] array = new int[num];
+//		
+//		for (int i = 0; i < num; i++) {
+//			int number = scan.nextInt();
+//			array[i] = number; 
+//		}
+//		
+//		BubbleSort sort = new BubbleSort();
+//		sort.sort(array);
+//		
+//		System.out.println(sort.getSwapCnt());
 
 		
 		NumberBaseball baseball = new NumberBaseball();
 		
-		baseball.makeNumber();
-		
-		System.out.println(baseball.playGame(3, 4, 6));
+//		baseball.makeNumber();
+//		
+//		System.out.println(baseball.playGame(3, 4, 6));
 		
 		ArrayList<ArrayList<Integer>> numSet = new ArrayList<ArrayList<Integer>>();
 		
-		for (int i = 0; i < 4; i++) {
+		for (int i = 0; i < 1; i++) {
 			int num1 = scan.nextInt();
 			
 			int strike = scan.nextInt();
@@ -48,6 +48,8 @@ public class Main {
 			
 			numSet.add(inputNum);
 		}
+		
+		System.out.println(baseball.predictNumber(numSet));
 		
 		scan.close();
 		
