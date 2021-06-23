@@ -33,7 +33,7 @@ public class Main {
 		
 		ArrayList<ArrayList<Integer>> numSet = new ArrayList<ArrayList<Integer>>();
 		
-		for (int i = 0; i < 1; i++) {
+		for (int i = 0; i < 4; i++) {
 			int num1 = scan.nextInt();
 			
 			int strike = scan.nextInt();
