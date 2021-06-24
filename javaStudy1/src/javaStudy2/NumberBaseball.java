@@ -53,10 +53,10 @@ public class NumberBaseball {
 			ball++;
 		}
 		
-		ArrayList<Integer> strikeBall = new ArrayList<Integer>();
-		strikeBall.add(strike);
-		strikeBall.add(ball);
-		return strikeBall;
+		ArrayList<Integer> result = new ArrayList<Integer>();
+		result.add(strike);
+		result.add(ball);
+		return result;
 	}
 	
 	public int predictNumber(ArrayList<ArrayList<Integer>> numSet) {
@@ -83,6 +83,7 @@ public class NumberBaseball {
 				int ball = numSet.get(j).get(2);
 				
 				ArrayList<Integer> gameResult = playGame(number / 100, number % 100 / 10, number % 100 % 10);
+				
 				if (gameResult.get(0) == strike && gameResult.get(1) == ball) {
 					continue;
 				}
@@ -90,12 +91,13 @@ public class NumberBaseball {
 					flag = false;
 				}	
 			}
+			
 			if (flag == true) {
 				result.add(i);
 			}
+			
 			numberSet.clear();
 		}
-		
 		return result.size();
 	}
 }
