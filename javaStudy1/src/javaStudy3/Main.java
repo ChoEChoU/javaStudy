@@ -6,10 +6,15 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-//		Factorial factorial = new Factorial();
-//		System.out.println(factorial.calculation(4));
-		
 		Scanner scan = new Scanner(System.in);
+		
+		Factorial factorial = new Factorial();
+		
+		int inputNumber = scan.nextInt();
+		
+		System.out.println(factorial.calculation(inputNumber));
+		
+// �ѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤ�
 		
 		int n = scan.nextInt();
 		int m = scan.nextInt();
@@ -23,6 +28,8 @@ public class Main {
 		
 		BlackJack blackjack = new BlackJack();
 		System.out.println(blackjack.playGame(numSet, m));
+		
+		scan.close();
 	}
 
 }

@@ -9,7 +9,7 @@ public class Factorial {
 			return result;
 		}
 		else {
-			return result+1;
+			return result + 1;
 		}
 	}
 }
