@@ -7,10 +7,10 @@ public class BlackJack {
 		int result = 0;
 		
 		for (int i = 0; i < numSet.length; i++) {
-			int first = numSet[i];
 			for (int j = 0; j < numSet.length; j++) {
-				int second = numSet[j];
 				for (int k = 0; k < numSet.length; k++) {
+					int first = numSet[i];
+					int second = numSet[j];
 					int third = numSet[k];
 					if (i == j || j == k || k == i) {
 						continue;
