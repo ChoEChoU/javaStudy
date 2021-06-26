@@ -14,7 +14,7 @@ public class Main {
 		
 		System.out.println(factorial.calculation(inputNumber));
 		
-// �ѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤ�
+// ===========================================
 		
 		int n = scan.nextInt();
 		int m = scan.nextInt();
