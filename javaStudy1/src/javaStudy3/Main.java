@@ -20,6 +20,9 @@ public class Main {
 			int number = scan.nextInt();
 			numSet[i] = number;
 		}
+		
+		BlackJack blackjack = new BlackJack();
+		System.out.println(blackjack.playGame(numSet, m));
 	}
 
 }
