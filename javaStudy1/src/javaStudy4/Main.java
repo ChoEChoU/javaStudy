@@ -18,6 +18,18 @@ public class Main {
 		
 		tree.postOrder(tree.getRoot());
 		
+//		================================================
+		
+		TowerOfHanoi hanoi = new TowerOfHanoi();
+		
+		int number = scan.nextInt();
+		
+		int count = (int) Math.pow(2, number)-1;
+		
+		System.out.println(count);
+		
+		hanoi.move(number, 1, 3, 2);
+		
 		scan.close();
 	}
 
