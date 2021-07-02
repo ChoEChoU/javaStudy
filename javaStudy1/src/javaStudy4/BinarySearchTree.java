@@ -7,6 +7,10 @@ public class BinarySearchTree {
 		this.root = node;
 	}
 	
+	public Node getRoot() {
+		return root;
+	}
+	
 	public void insert(Node node) {
 		if (root == null) {
 			setRoot(node);
