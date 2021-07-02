@@ -65,7 +65,6 @@ public class BinarySearchTree {
 	public void postOrder(Node node) {
 		if (node != null) {
 			postOrder(node.getLeft());
-//			System.out.println(node.getKey());
 			postOrder(node.getRight());
 			System.out.println(node.getKey());
 		}
