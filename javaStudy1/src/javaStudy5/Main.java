@@ -20,16 +20,14 @@ public class Main {
 		}
 		
 		int m = scan.nextInt();
-		
+ 		
 		for (int i = 0; i < m; i++) {
 			int first = scan.nextInt();
 			int second = scan.nextInt();
 			
-			if (first < second) {
-				while (first < second) {
-					
-				}
-			}
+			BusRoute busRoute = new BusRoute(first, second, stationSet);
+			
+			 
 		}
 	}
 
